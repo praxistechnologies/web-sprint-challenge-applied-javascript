@@ -75,8 +75,18 @@ After finishing your required elements, you can push your work further. These go
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
-1. What is the DOM?
-2. What is an event?
+1. What is the DOM? 
+Defined as a Document Object Model. DOM defines a standard for accessing documents. When a web page loads, first the HTML is read and built. The browser parses and builds a model for the page using JavaScript. This model is a JavaScript Object. DOM is built as a Data Structure known as a tree with parent elements and nested child elements. Though, each child element of the DOM can also be its own tree with nested child elements. When the page is build developers can access the DOM as a JS object document.
+
+
+2. What is an event? 
+Javascript allows for code to be executed when events are detected. Events notify code of changes that may effect execution. Each event is represented by an object that is based on the Event interface that also may have additional custom fields or functions that provide information about what happened. 
+
 3. What is an event listener?
+Once an element is selected .addEventListener can be applied to that element. .addEventListener takes two arguments with the first being an event to listen for along with a second being the callback to initiate when that event is triggered; i.e.: "element.addEventListener('click', callback);" with a mouse click being the event thus making the web page interactive.
+
 4. Why would we convert a NodeList into an Array?
+The native JavaScript ES6 release brought a handful of helpful methods for working with arrays: Array.forEach(), Array.every(), Array.some(), Array.filter(), and more. Unfortunately, we can’t use any of these with the elements you get back when using querySelectorAll() because they would return a NodeList is not an array.
+
 5. What is a component?
+Components are reuseable blocks of code made up of HTML, CSS and or JavaScript.

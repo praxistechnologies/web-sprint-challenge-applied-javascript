@@ -29,7 +29,7 @@ const Header = (title, date, temp) => {
   
 }
 
-const headerAppender = (selector) => {
+const headerAppender = async (selector) => {
   
   // TASK 2
   // ---------------------
@@ -37,9 +37,18 @@ const headerAppender = (selector) => {
   // It should create a header using the Header component above, passing arguments of your choosing.
   // It should append the header to the element in the DOM that matches the given selector.
   //
-  const header = Header("Web", new Date(), "Temp");
-  document.body.appendChild(header)
   
+  const header = Header("Lambda Times", "Jan 6, 2021", "26*");
+  while(true) {
+    if(document.querySelector(selector)) {
+      break;
+    }
+    await new Promise(function(resolve) {
+      setTimeout(resolve, 100);
+    })
+  }
+  const node =  document.querySelector(selector);
+  node.appendChild(header)
 }
 
 export { Header, headerAppender }
